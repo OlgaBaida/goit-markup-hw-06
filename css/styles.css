@@ -24,7 +24,6 @@
   --social-icon: #afb1b8;
   --gradient-color: rgba(47, 48, 58, 0.4);
   --overley-bg: rgba(33, 150, 243, 0.9);
- 
 }
 body {
   background-color: var(--whaite--bg-color);
@@ -52,7 +51,6 @@ p {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 img {
   display: block;
   max-width: 100%;
@@ -68,13 +66,6 @@ img {
 }
 .page-header {
   border-bottom: 1px solid var(--line-color);
-}
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.section.no-padding {
-  padding-top: 0;
 }
 .container {
   width: 1200px;
@@ -170,6 +161,13 @@ img {
 }
 .contact-icon {
   fill: currentColor;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section.no-padding {
+  padding-top: 0;
 }
 .hero {
   max-width: 1600px;
@@ -276,6 +274,9 @@ img {
   
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn-icon {
   fill: currentColor;
@@ -284,6 +285,9 @@ img {
 .modal-btn-icon:hover,
 .modal-btn-icon:focus {
   fill: #188CE8 ;
+  transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -331,25 +335,25 @@ img {
   padding-left: 42px;
   outline: transparent;
   border-radius: 4px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
 .feedback-form-icon{
   position: absolute;
   bottom: 11px;
   left: 12px;
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .feedback-form-input:focus {
   border: 1px solid #2196F3;
+  transition-property: border-cilor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .feedback-form-input:focus + .feedback-form-icon
 {
   fill: var(--accent-txt-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .feedback-form-comment {
   display: block;
@@ -693,10 +697,6 @@ color: var(--accent-txt-color);
   text-transform: uppercase;
   color: var(--whaite-txt-color);
   margin-bottom: 20px;
- 
-}
-.subscription-form-grup {
-  display: flex;
 }
 .subscription-input {
   color: var(--whaite-txt-color);
